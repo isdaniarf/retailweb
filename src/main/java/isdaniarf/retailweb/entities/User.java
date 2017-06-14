@@ -1,9 +1,8 @@
 package isdaniarf.retailweb.entities;
 
-import isdaniarf.retailweb.entities.meta.Types;
+import isdaniarf.retailweb.entities.meta.Types.UserType;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 /**
@@ -14,12 +13,16 @@ import java.time.LocalDate;
 public class User {
 
     @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private Types.User type;
+
+    @Enumerated(EnumType.STRING)
+    private UserType type;
+
     private LocalDate registeredDate;
 
-    public User(String name, Types.User type, LocalDate registeredDate){
+    public User(String name, UserType type, LocalDate registeredDate){
         this.name = name;
         this.type = type;
         this.registeredDate = registeredDate;
@@ -33,11 +36,11 @@ public class User {
         this.name = name;
     }
 
-    public Types.User getType() {
+    public UserType getType() {
         return type;
     }
 
-    public void setType(Types.User type) {
+    public void setType(UserType type) {
         this.type = type;
     }
 

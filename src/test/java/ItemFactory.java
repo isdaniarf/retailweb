@@ -8,11 +8,11 @@ import java.util.HashMap;
  */
 public class ItemFactory {
 
-    public static Item createItem(String name, Types.Item type, double price) {
+    public static Item createItem(String name, Types.ItemType type, double price) {
         return new Item(name, type, price);
     }
 
-    public static HashMap<Item, Integer> createBulkItem(String name, Types.Item type, double price, Integer amount) {
+    public static HashMap<Item, Integer> createBulkItem(String name, Types.ItemType type, double price, Integer amount) {
         HashMap<Item, Integer> itemMap = new HashMap<Item, Integer>();
         itemMap.put(createItem(name, type, price), amount);
         return itemMap;

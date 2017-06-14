@@ -5,11 +5,11 @@ package isdaniarf.retailweb.entities.meta;
  */
 public class Types {
 
-    public enum User {
+    public enum UserType {
         CUSTOMER, EMPLOYEE, AFFILIATE;
     }
 
-    public enum Item {
+    public enum ItemType {
         NON_GROCERY, GROCERY;
     }
 }

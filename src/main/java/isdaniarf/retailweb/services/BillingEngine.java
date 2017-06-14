@@ -22,17 +22,17 @@ public class BillingEngine {
     private static double calculateItemPrice(User user, Item item) {
         double finalPrice = item.getPrice();
 
-        if (item.getType() == Types.Item.GROCERY) {
+        if (item.getType() == Types.ItemType.GROCERY) {
             return finalPrice;
         }
 
-        if (user.getType() == Types.User.CUSTOMER) {
+        if (user.getType() == Types.UserType.CUSTOMER) {
             if (Period.between(user.getRegisteredDate(), LocalDate.now()).getYears() >= 2) {
                 finalPrice -= finalPrice * DISCOUNT_PERCENTAGE_5;
             }
-        } else if (user.getType() == Types.User.EMPLOYEE) {
+        } else if (user.getType() == Types.UserType.EMPLOYEE) {
             finalPrice -= finalPrice * DISCOUNT_PERCENTAGE_30;
-        } else if (user.getType() == Types.User.AFFILIATE) {
+        } else if (user.getType() == Types.UserType.AFFILIATE) {
             finalPrice -= finalPrice * DISCOUNT_PERCENTAGE_10;
         }
 
@@ -48,7 +48,7 @@ public class BillingEngine {
             totalPrice += calculateItemPrice(user, entry.getKey()) * entry.getValue();
         }
 
-        int multiplier = (int) (originalPrice/100);
+        int multiplier = (int) (originalPrice / 100);
         totalPrice -= multiplier * DISCOUNT_DOLLAR_5;
 
         return totalPrice;

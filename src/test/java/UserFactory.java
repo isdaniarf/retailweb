@@ -8,7 +8,7 @@ import java.time.LocalDate;
  */
 public class UserFactory {
 
-    public static User createUser(String name, Types.User type, int registeredYears) {
+    public static User createUser(String name, Types.UserType type, int registeredYears) {
         LocalDate registeredDate = LocalDate.now().minusYears(registeredYears);
         return new User(name, type, registeredDate);
     }

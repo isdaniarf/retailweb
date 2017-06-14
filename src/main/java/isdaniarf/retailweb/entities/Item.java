@@ -1,9 +1,8 @@
 package isdaniarf.retailweb.entities;
 
-import isdaniarf.retailweb.entities.meta.Types;
+import isdaniarf.retailweb.entities.meta.Types.ItemType;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by Isdaniar_F on 14/06/2017.
@@ -13,12 +12,15 @@ import javax.persistence.Id;
 public class Item {
 
     @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
     private String name;
     private double price;
-    private Types.Item type;
 
-    public Item(String name, Types.Item type, double price) {
+    @Enumerated(EnumType.STRING)
+    private ItemType type;
+
+    public Item(String name, ItemType type, double price) {
         this.name = name;
         this.price = price;
         this.type = type;
@@ -40,11 +42,11 @@ public class Item {
         this.price = price;
     }
 
-    public Types.Item getType() {
+    public ItemType getType() {
         return type;
     }
 
-    public void setType(Types.Item type) {
+    public void setType(ItemType type) {
         this.type = type;
     }
 }
