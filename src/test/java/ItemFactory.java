@@ -1,5 +1,5 @@
-import isdaniarf.retailweb.entities.Item;
-import isdaniarf.retailweb.entities.meta.Types;
+import isdaniarf.retailweb.model.Item;
+import isdaniarf.retailweb.model.meta.Types;
 
 import java.util.HashMap;
 

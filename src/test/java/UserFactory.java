@@ -1,5 +1,5 @@
-import isdaniarf.retailweb.entities.User;
-import isdaniarf.retailweb.entities.meta.Types;
+import isdaniarf.retailweb.model.User;
+import isdaniarf.retailweb.model.meta.Types;
 
 import java.time.LocalDate;
 

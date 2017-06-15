@@ -1,6 +1,6 @@
-import isdaniarf.retailweb.entities.Item;
-import isdaniarf.retailweb.entities.User;
-import isdaniarf.retailweb.entities.meta.Types;
+import isdaniarf.retailweb.model.Item;
+import isdaniarf.retailweb.model.User;
+import isdaniarf.retailweb.model.meta.Types;
 import org.junit.Assert;
 import org.junit.Test;
 import isdaniarf.retailweb.services.BillingEngine;

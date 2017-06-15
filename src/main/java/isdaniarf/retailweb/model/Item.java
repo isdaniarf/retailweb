@@ -1,6 +1,6 @@
-package isdaniarf.retailweb.entities;
+package isdaniarf.retailweb.model;
 
-import isdaniarf.retailweb.entities.meta.Types.ItemType;
+import isdaniarf.retailweb.model.meta.Types.ItemType;
 
 import javax.persistence.*;
 
@@ -20,10 +20,20 @@ public class Item {
     @Enumerated(EnumType.STRING)
     private ItemType type;
 
+    public Item() {}
+
     public Item(String name, ItemType type, double price) {
         this.name = name;
         this.price = price;
         this.type = type;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {

@@ -1,4 +1,4 @@
-package isdaniarf.retailweb.entities.meta;
+package isdaniarf.retailweb.model.meta;
 
 /**
  * Created by Isdaniar_F on 14/06/2017.

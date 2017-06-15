@@ -1,2 +1,0 @@
---INSERT INTO USER (name, type, registered_date)
---VALUES ('John', 'EMPLOYEE', '06-02-2017')
