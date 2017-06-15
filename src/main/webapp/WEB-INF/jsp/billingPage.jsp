@@ -3,7 +3,9 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <html>
-    <head></head>
+    <head>
+        <title>Retail Web Application</title>
+    </head>
     <body>
         <spring:url value="/calculate" var="submit" />
 
