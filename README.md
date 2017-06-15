@@ -22,3 +22,4 @@ To build & run the web application, simply execute:
 ```
 mvn spring-boot:run
 ```
+To view the web UI, browse `localhost:8080`.
