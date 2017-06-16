@@ -1,16 +1,25 @@
+import isdaniarf.retailweb.Application;
 import isdaniarf.retailweb.model.Item;
 import isdaniarf.retailweb.model.User;
 import isdaniarf.retailweb.model.meta.Types;
 import org.junit.Assert;
 import org.junit.Test;
 import isdaniarf.retailweb.services.BillingEngine;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 
 import java.util.HashMap;
 
 /**
  * Created by Isdaniar_F on 14/06/2017.
  */
+
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = Application.class)
+@WebAppConfiguration
 public class BillingTest {
 
     @Autowired
