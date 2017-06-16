@@ -42,7 +42,7 @@ public class BillingRestTest {
     }
 
     @Test
-    public void getPriceForEmployeeWithGrocery() throws Exception {
+    public void getPriceForEmployeeWithNonGrocery() throws Exception {
         mockMvc.perform(get("/api/getPrice?user=John&item=Chair")
                 .contentType(MediaType.TEXT_PLAIN))
                 .andExpect(content().string("65.0"));
