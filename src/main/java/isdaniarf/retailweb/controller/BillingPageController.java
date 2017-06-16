@@ -31,6 +31,9 @@ public class BillingPageController {
     @Autowired
     UserRepository userRepository;
 
+    @Autowired
+    BillingEngine billingEngine;
+
     @RequestMapping("/")
     public String welcome(Map<String, Object> model) {
         List<User> users = (List) userRepository.findAll();
@@ -50,10 +53,10 @@ public class BillingPageController {
         User user = users.get(Integer.parseInt(selectedUser) - 1);
         Item item = items.get(Integer.parseInt(selectedItem) - 1);
 
-        HashMap<Item, Integer> bulkItem = new HashMap<Item, Integer>();
+        HashMap<Item, Integer> bulkItem = new HashMap<>();
         bulkItem.put(item, Integer.parseInt(amount));
 
-        double finalPrice = BillingEngine.calculateBulkPrice(user, bulkItem);
+        double finalPrice = billingEngine.calculateBulkPrice(user, bulkItem);
 
         model.put("users", users);
         model.put("items", items);

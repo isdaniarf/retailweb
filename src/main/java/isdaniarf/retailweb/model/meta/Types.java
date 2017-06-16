@@ -12,4 +12,8 @@ public class Types {
     public enum ItemType {
         NON_GROCERY, GROCERY;
     }
+
+    public enum DiscountType {
+        DOLLAR, PERCENTAGE;
+    }
 }
