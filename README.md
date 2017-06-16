@@ -17,8 +17,13 @@ On a retail website, the following discounts apply:
 - MySQL/MariaDB
 
 # Building & Running
-Setup a database on MySQL/MariaDB named `retailweb`.
+Setup a database on MySQL/MariaDB named `retailweb`.  
+To run the unit tests, execute:
+```
+mvn test
+```
 To build & run the web application, simply execute:
 ```
 mvn spring-boot:run
 ```
+To view the web UI, browse `localhost:8080`.
